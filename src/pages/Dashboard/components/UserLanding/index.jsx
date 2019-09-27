@@ -16,6 +16,8 @@ const UserLanding = (props) => {
     props.history.push('/post/new');
   };
 
+  console.log(props)
+
   return (
     <Row wrap gutter="20">
       <Col l="18">
