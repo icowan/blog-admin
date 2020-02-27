@@ -15,7 +15,7 @@ export default () => {
           条款
         </a>
       </div>
-      <div className={styles.copyright}>阿里巴巴集团 © 2018 版权所有</div>
+      <div className={styles.copyright}> LatteCake © 2020 版权所有</div>
     </div>
   );
 };

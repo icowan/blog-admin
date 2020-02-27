@@ -1,7 +1,8 @@
-const { eslint, deepmerge } = require('@ice/spec');
+const {eslint, deepmerge} = require('@ice/spec');
 
 module.exports = deepmerge(eslint, {
-  rules: {
-    "global-require": 0,
-  },
+    rules: {
+        "global-require": 0,
+        // "eslint-disable": true,
+    },
 });

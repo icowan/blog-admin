@@ -12,15 +12,15 @@ export default function Footer() {
           <Logo />
         </div>
         <div className={styles.copyright}>
-          © 2018 Theme designed by
+          © 2020 Theme designed by
           {' '}
           <a
-            href="https://github.com/alibaba/ice"
+            href="https://lattecake.com/about"
             target="_blank"
             className={styles.copyrightLink}
             rel="noopener noreferrer"
           >
-            ICE
+            LatteCake
           </a>
         </div>
       </div>

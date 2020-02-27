@@ -6,10 +6,29 @@ import {
   FormBinder as IceFormBinder,
   FormError as IceFormError,
 } from '@icedesign/form-binder';
+import { request } from 'ice'
 import IceIcon from '@icedesign/foundation-symbol';
 import styles from './index.module.scss';
 
 const { Row, Col } = Grid;
+
+const appConfig = {
+  request: {
+    // ref: https://github.com/axios/axios#request-config
+    baseURL: '/api',
+    // ref: https://github.com/axios/axios#interceptors
+    interceptors: {
+      request: {
+        onConfig: (config) => {},
+        onError: (error) => {}
+      },
+      response: {
+        onConfig: (config) => {},
+        onError: (error) => {}
+      },
+    }
+  }
+};
 
 const UserLogin = (props) => {
   const [value, setValue] = useState({
@@ -33,6 +52,10 @@ const UserLogin = (props) => {
       }
       console.log(values);
       Message.success('登录成功');
+      // const { data, loading, error, request } = useRequest({
+      //   url: '/api/list',
+      //   method: 'GET',
+      // });
       props.history.push('/');
     });
   };
